@@ -1,0 +1,36 @@
+<div class="container no-padding">
+  <div class='main-panel__filter-input-container'>
+    <div class="row">
+      <div class='col-xs-12 col-sm-12 no-padding'>
+        <filter-input (searchFinished)='updateDisplay($event)'></filter-input>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf='displayedCars.length'>
+    <div class='row'>
+      <div *ngFor='let car of displayedCars; let i = index' class='col-xs-12 col-sm-6 col-md-4 no-padding'>
+        <div *ngIf='(i+1)%3!=0' class='main-panel__car-box-container main-panel__car-box-container--bordered '>
+          <car-box (onCarSelected)='addCarForTracking(carGrid,$event)' [car]='car'></car-box>
+        </div>
+
+        <div *ngIf='(i+1)%3==0' class='main-panel__car-box-container main-panel__car-box-container--bordered main-panel__car-box-container--no-bordered-right'>
+          <car-box (onCarSelected)='addCarForTracking(carGrid,$event)' [car]='car'></car-box>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='main-panel__grid--container'>
+    <car-grid #carGrid></car-grid>
+  </div>
+
+  <div class='main-panel__animation-speed'>
+    <div class='main-panel__animation-speed--elements'>
+      <input type='number' class='form-control' min='1' #animationSpeed />
+    </div>
+    <div class='main-panel__animation-speed--elements'>
+      <button (click)='startAnimation(animationSpeed.value,carGrid)' class='btn btn-default btn-md'>START</button>
+    </div>
+  </div>
+</div>

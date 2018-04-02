@@ -1,0 +1,33 @@
+.main-panel__car-box-container {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+}
+
+.main-panel__car-box-container--bordered {
+    border-bottom: 2px solid gray;
+    border-right: 2px solid gray;
+}
+
+.main-panel__filter-input-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+
+.main-panel__car-box-container--no-bordered-right {
+    border-right: none;
+}
+
+.main-panel__animation-speed {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.main-panel__animation-speed--elements {
+    padding-left: 10px;
+}

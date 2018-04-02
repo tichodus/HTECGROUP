@@ -1,0 +1,28 @@
+<div *ngIf='traffic' class='car-grid__container'>
+  <div class='car-grid__row car-grid__signs'>
+    <div id='gridHeader' *ngFor='let col of getNumberOfColumnsAsArray(); let i = index;' class='car-grid__cell'>
+      <div class='car-grid__semaphore--container' #sem>
+        <div *ngIf='isSemaphore(i,sem)'><div id='semaphore{{i}}'class='car-grid__semaphore car-grid__semaphore--green'></div></div>
+      </div>
+      <div class='car-grid__speed-limit--container' #speedLimit>
+        <div *ngIf='isSpeedLimit(i,speedLimit)'>
+          <div id='speedLimit{{i}}' *ngIf='isSpeedLimitSixty(i)' class='car-grid__speed-limit car-grid__speed-limit--60'></div>
+          <div id='speedLimit{{i}}' *ngIf='isSpeedLimitEighty(i)' class='car-grid__speed-limit car-grid__speed-limit--80'></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class='car-grid__row'>
+    <div id='gridHeader' *ngFor='let col of getNumberOfColumnsAsArray(); let i = index;' class='car-grid__cell '>
+      <span class='car-grid__path-sequence' *ngIf='i>0'>{{i}}xN</span>
+    </div>
+  </div>
+
+  <div *ngFor='let car of trackingCars; let i = index;' class='car-grid__row'>
+    <div id='{{i}}{{j}}' *ngFor='let col of getNumberOfColumnsAsArray(); let j = index;' class='car-grid__cell car-grid__border--gray'>
+      <img (click)='animate()' *ngIf='car && getCarPosition(car) == j' src='{{car.image}}' class='car-grid__item' />
+    </div>
+  </div>
+</div>

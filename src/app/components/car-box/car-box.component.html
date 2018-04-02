@@ -1,0 +1,23 @@
+<div #carBox class="car-box border-gray">
+
+    <div class='rotate'>
+        <div #carBoxCard class="car-box__card">
+
+        </div>
+
+        <div (click)='selectCar()' class='car-box__card--description'>
+            <div class='row'>
+                <div class='col-xs-12 col-sm-12 col-md-12'>
+                    <mat-checkbox *ngIf='carSelected' [checked]='carSelected' [color]='"primary"'>
+                    </mat-checkbox>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <span id='description'>{{car.description}}</span>
+                    <br/>
+                    <span>
+                        <strong>Speed:</strong> {{car.speed}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

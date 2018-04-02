@@ -1,0 +1,11 @@
+
+<div id="custom-search-input">
+  <div class="input-group col-md-12">
+    <input type="text" class="form-control input-lg" [(ngModel)] = 'queryString' (keyup.enter)='search()' placeholder="Search..." />
+    <span class="input-group-btn">
+      <button class="btn btn-info btn-lg" (click)='search()' type="button">
+        <i class="fas fa-search"></i>
+      </button>
+    </span>
+  </div>
+</div>

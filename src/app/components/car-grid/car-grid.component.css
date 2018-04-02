@@ -1,0 +1,96 @@
+.car-grid__container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.car-grid__cell {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.car-grid__border--gray {
+    border: 2px solid gray;
+}
+
+.car-grid__row {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+}
+
+.car-grid__item {
+    width: 100%;
+    height: 100%;
+}
+
+.car-grid__path-sequence {
+    margin-left: -10px;
+}
+
+.car-grid__border--gold {
+    border: 2px solid gold;
+}
+
+.car-grid__border--silver {
+    border: 2px solid silver;
+}
+
+.car-grid__border--bronze {
+    border: 2px solid #cd7f32;
+}
+
+.car-grid__semaphore--container {
+    float: right;
+    position: absolute;
+    margin-right: 0;
+}
+
+.car-grid__speed-limit--container {
+    float: left;
+    margin-left: 0;
+    position: absolute;
+    width: 50%;
+}
+
+.car-grid__signs {
+    margin-bottom: 30px;
+}
+
+.car-grid__semaphore--green {
+    background-image: url("/assets/sem_green.png");
+}
+
+.car-grid__semaphore--red {
+    background-image: url("/assets/sem_red.png");
+}
+
+.car-grid__semaphore {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.car-grid__speed-limit {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.car-grid__speed-limit--60 {
+    background-image: url("/assets/speed_limit_60.png");
+}
+
+.car-grid__speed-limit--80 {
+    background-image: url("/assets/speed_limit_80.png");
+}
